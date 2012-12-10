@@ -8,13 +8,10 @@ Welcome to Differ Documentation!
 
 Contents:
 
+.. contents::
+
 .. toctree::
    :maxdepth: 2
-
-
-
-Recognized Validation Reports
------------------------------
 
 .. raw:: html
 
@@ -33,3 +30,14 @@ Recognized Validation Reports
   <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
   
+
+Recognized Validator Outputs
+----------------------------
+
+.. include:: djvudump.rst
+
+.. include:: jpylyzer.rst
+
+.. include:: exiftool.rst
+
+.. include:: jhove.rst
