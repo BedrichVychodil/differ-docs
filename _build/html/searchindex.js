@@ -1,0 +1,1 @@
+Search.setIndex({objects:{},terms:{differ:0,recogn:0,welcom:0,content:0,valid:0,report:0,document:0},objtypes:{},titles:["Welcome to Differ Documentation!"],objnames:{},filenames:["index"]})
