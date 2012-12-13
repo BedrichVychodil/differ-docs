@@ -1,10 +1,10 @@
-JHOVE
+FITS
 .....
 
-.. literalinclude:: outputs/get-jhove.sh
+.. literalinclude:: outputs/get-fits.sh
 		    :language: bash
 
-.. literalinclude:: outputs/jhove.raw
+.. literalinclude:: outputs/fits.raw
 
 
 Significant Properties
@@ -13,14 +13,14 @@ Significant Properties
    ==========================    ============================================================================================================
    Information                   Value from an example
    ==========================    ============================================================================================================
-   datum vytvoreni               /jhove/repInfo/lastModified  (2012-02-17T22:07:54+01:00)
-   velikost souboru              /jhove/repInfo/size (476756)
+   datum vytvoreni               /fits/fileinfo/created[0]
+   velikost souboru              /fits/fileinfo/size
    pocet barev                   
-   24bitu, 8bitu (grey scale)    //mix:ImageColorEncoding/mix:bitsPerSampleValue (8)
-   rozliseni                     //mix:imageWidth x //mix:imageHeight  (512x512)
+   24bitu, 8bitu (grey scale)    /fits/metadata/image/bitsPerSample
+   rozliseni                     /fits/metadata/image/imageWidth x /fits/metadata/image/imageHeight
    pocet vrstev                  
    expozice
-   vyvazeni bile                 
+   vyvazeni bile                 /fits/metadata/image/lightSource
    ==========================    ============================================================================================================
 
 		    

@@ -41,3 +41,5 @@ Recognized Validator Outputs
 .. include:: exiftool.rst
 
 .. include:: jhove.rst
+
+.. include:: fits.rst

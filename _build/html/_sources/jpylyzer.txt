@@ -7,7 +7,7 @@ LPyLyzer
 .. literalinclude:: outputs/jpylyzer.raw
 
 
-Recognized Informations
+Significant Properties
 ~~~~~~~~~~~~~~~~~~~~~~~	 
 
    ==========================    =================================================================================

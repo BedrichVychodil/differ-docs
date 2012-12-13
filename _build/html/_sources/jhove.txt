@@ -7,7 +7,7 @@ JHOVE
 .. literalinclude:: outputs/jhove.raw
 
 
-Recognized Informations
+Significant Properties
 ~~~~~~~~~~~~~~~~~~~~~~~	 
 
    ==========================    ============================================================================================================

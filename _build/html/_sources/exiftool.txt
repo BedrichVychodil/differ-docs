@@ -7,7 +7,7 @@ ExifTool
 .. literalinclude:: outputs/exiftool.raw
 
 
-Recognized Informations
+Significant Properties
 ~~~~~~~~~~~~~~~~~~~~~~~	 
 
    ==========================    =================================================================================

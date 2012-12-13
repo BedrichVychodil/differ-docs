@@ -9,7 +9,7 @@ DJDump
 .. literalinclude:: outputs/djvudump.raw
 		    
 
-Recognized Informations
+Significant Properties
 ~~~~~~~~~~~~~~~~~~~~~~~	 
 
    ==========================    ======================
