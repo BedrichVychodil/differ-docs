@@ -20,9 +20,11 @@ Significant Properties
    rozliseni                     //mix:imageWidth x //mix:imageHeight  (512x512)
    pocet vrstev                  
    expozice
-   vyvazeni bile                 
+   vyvazeni bile                 neco dalsiho
    ==========================    ============================================================================================================
 
+.. comments::
+  komentare
 		    
 	 
 		    
