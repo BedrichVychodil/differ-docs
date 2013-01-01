@@ -12,7 +12,7 @@ Significant Properties
 
 .. csv-table:: Map of significant properties
    :delim: ;
-   :header: "Property","XPath in JPylyzer xml output"
+   :header: "Properties", "Properties as used in program", "XPath in JPylyzer xml output"
    :file: jpylyzer.csv
 
 
