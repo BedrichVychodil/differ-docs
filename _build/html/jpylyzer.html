@@ -450,45 +450,227 @@ jpylyzer --verbose <span class="s1">&#39;/opt/testovaci-data/2_Set ot TEST image
 </div>
 <div class="section" id="significant-properties">
 <h2>Significant Properties<a class="headerlink" href="#significant-properties" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><table border="1" class="docutils">
+<table border="1" class="docutils">
+<caption>Map of significant properties</caption>
 <colgroup>
-<col width="24%" />
-<col width="76%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Information</th>
-<th class="head">Value from an example</th>
+<tr class="row-odd"><th class="head">Property</th>
+<th class="head">XPath in JPylyzer xml output</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>datum vytvoreni</td>
-<td>/fileInfo/fileLastModified</td>
+<tr class="row-even"><td>property</td>
+<td>xpath</td>
 </tr>
-<tr class="row-odd"><td>velikost souboru</td>
-<td>/fileInfo/fileSizeInBytes</td>
+<tr class="row-odd"><td>fileLastModified</td>
+<td>fileInfo/fileLastModified</td>
 </tr>
-<tr class="row-even"><td>pocet barev</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>fileSize</td>
+<td>fileInfo/fileSizeInBytes</td>
 </tr>
-<tr class="row-odd"><td>24bitu, 8bitu (grey scale)</td>
-<td>/contiguousCodestreamBox/siz/szizDepth (8)</td>
+<tr class="row-odd"><td>fileSizeInBytes</td>
+<td>fileInfo/fileSizeInBytes</td>
 </tr>
-<tr class="row-even"><td>rozliseni</td>
-<td>/contiguousCodestreamBox/siz/xsiz x /contiguousCodestreamBox/siz/xsiz (2451x3453)</td>
+<tr class="row-even"><td>ImageWidth</td>
+<td>jp2HeaderBox/imageHeaderBox/height</td>
 </tr>
-<tr class="row-odd"><td>pocet vrstev</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>ImageHeight</td>
+<td>jp2HeaderBox/imageHeaderBox/width</td>
 </tr>
-<tr class="row-even"><td>expozice</td>
-<td>&nbsp;</td>
+<tr class="row-even"><td>colorDepth</td>
+<td>contiguousCodestreamBox/siz/ssizDepth</td>
 </tr>
-<tr class="row-odd"><td>vyvazeni bile</td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td>numOfChannels</td>
+<td>jp2HeaderBox/imageHeaderBox/nC</td>
+</tr>
+<tr class="row-even"><td>colorSpace</td>
+<td>properties/jp2HeaderBox/colourSpecificationBox/enumCS</td>
+</tr>
+<tr class="row-odd"><td>numOfDecompositionLevels</td>
+<td>contiguousCodestreamBox/cod/levels</td>
+</tr>
+<tr class="row-even"><td>numOfQualityLayers</td>
+<td>contiguousCodestreamBox/cod/layers</td>
+</tr>
+<tr class="row-odd"><td>resolutionInPixelsPerInch</td>
+<td>jp2HeaderBox/resolutionBox/displayResolutionBox/vResdInPixelsPerInch</td>
+</tr>
+<tr class="row-even"><td>displayResolutionInPixelsPerInch</td>
+<td>jp2HeaderBox/resolutionBox/displayResolutionBox/hResdInPixelsPerInch</td>
+</tr>
+<tr class="row-odd"><td>displayResolutionInPixelsPerInch</td>
+<td>jp2HeaderBox/resolutionBox/displayResolutionBox/hResdInPixelsPerInch</td>
+</tr>
+<tr class="row-even"><td>wellFormedAndValid</td>
+<td>isValidJP2</td>
+</tr>
+<tr class="row-odd"><td>imageStyleFormat</td>
+<td>properties/jp2HeaderBox/imageHeaderBox/c</td>
+</tr>
+<tr class="row-even"><td>uuid</td>
+<td>properties/uuidBox/uuid</td>
+</tr>
+<tr class="row-odd"><td>commentary</td>
+<td>contiguousCodestreamBox/com/comment</td>
+</tr>
+<tr class="row-even"><td>numberOfTiles</td>
+<td>contiguousCodestreamBox/siz/numberOfTiles</td>
 </tr>
 </tbody>
 </table>
+<div class="section" id="dalsi">
+<h3>dalsi<a class="headerlink" href="#dalsi" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div></div></blockquote>
+<p>tabulka
+- identifikace
+image style format</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">jp2000</span>
+</pre></div>
+</div>
+<p>file format</p>
+<div class="highlight-python"><pre>*.jp2 , *.jpf</pre>
+</div>
+<ul class="simple">
+<li>validace
+all //tests are important</li>
+<li>charakterizace</li>
+</ul>
+<p>commentaries</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">kakadu</span>
+</pre></div>
+</div>
+<p>compression</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">reversible</span><span class="o">/</span><span class="n">ireversible</span>
+</pre></div>
+</div>
+<p>transformation</p>
+<div class="highlight-python"><pre>5-3 reversible
+9-7 ireversible</pre>
+</div>
+<p>compression ration</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">2.39</span>
+</pre></div>
+</div>
+<p>tails</p>
+<div class="highlight-python"><pre>&lt;contiguousCodestreamBox&gt;
+&lt;siz&gt;
+  &lt;numberOfTiles&gt;1&lt;/numberOfTiles&gt;</pre>
+</div>
+<p>progression order</p>
+<div class="highlight-python"><pre>&lt;order&gt;RPCL&lt;/order&gt;
+
+values
+======
+CPRL
+RPCL
+RLCP
+LRCP
+PCRL
+CPRL</pre>
+</div>
+<p>num of decomposition levels</p>
+<div class="highlight-python"><pre>&lt;cod&gt;
+  &lt;levels&gt;5&lt;/levels&gt;</pre>
+</div>
+<p>quality layers</p>
+<div class="highlight-python"><pre>&lt;layers&gt;1&lt;/layers&gt;</pre>
+</div>
+<p>precinct</p>
+<div class="highlight-python"><pre>..  staci vypsat ve formate</pre>
+</div>
+<blockquote>
+<div><p>128x128, 256x256</p>
+<p>&lt;cod&gt;
+&lt;precinctSizeX&gt;128&lt;/precinctSizeX&gt;
+&lt;precinctSizeY&gt;128&lt;/precinctSizeY&gt;
+&lt;precinctSizeX&gt;128&lt;/precinctSizeX&gt;
+&lt;precinctSizeY&gt;128&lt;/precinctSizeY&gt;
+&lt;precinctSizeX&gt;128&lt;/precinctSizeX&gt;
+&lt;precinctSizeY&gt;128&lt;/precinctSizeY&gt;
+&lt;precinctSizeX&gt;128&lt;/precinctSizeX&gt;
+&lt;precinctSizeY&gt;128&lt;/precinctSizeY&gt;
+&lt;precinctSizeX&gt;128&lt;/precinctSizeX&gt;
+&lt;precinctSizeY&gt;128&lt;/precinctSizeY&gt;
+&lt;precinctSizeX&gt;256&lt;/precinctSizeX&gt;
+&lt;precinctSizeY&gt;256&lt;/precinctSizeY&gt;</p>
 </div></blockquote>
+<dl class="docutils">
+<dt>regions of interest ::</dt>
+<dd>no/yes</dd>
+</dl>
+<p>code block size</p>
+<div class="highlight-python"><pre>&lt;cod&gt;
+&lt;codeBlockWidth&gt;64&lt;/codeBlockWidth&gt;
+&lt;codeBlockHeight&gt;64&lt;/codeBlockHeight&gt;</pre>
+</div>
+<dl class="docutils">
+<dt>tail length layer ::</dt>
+<dd>yes /no</dd>
+<dt>bypass ::</dt>
+<dd>&lt;cod&gt;
+&lt;codingBypass&gt;yes&lt;/codingBypass&gt;</dd>
+<dt>icc profiles ::</dt>
+<dd>yes/no</dd>
+</dl>
+<p>soh start of packet header (zacatek hlavicky paketu)</p>
+<div class="highlight-python"><pre>&lt;sop&gt;yes&lt;/sop&gt;</pre>
+</div>
+<p>eph end of packet header</p>
+<div class="highlight-python"><pre>&lt;eph&gt;yes&lt;/eph&gt;</pre>
+</div>
+<p>xml box</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">no</span>
+</pre></div>
+</div>
+<p>uuid box</p>
+<div class="highlight-python"><pre>&lt;uuidBox&gt;
+  &lt;uuid&gt;be7acfcb-97a9-42e8-9c71-999491e3afac&lt;/uuid&gt;
+&lt;/uuidBox&gt;</pre>
+</div>
+<p>toto poskladat nejak dale.</p>
+<p>rozliseni</p>
+<div class="highlight-python"><pre>&lt;vResdInPixelsPerInch&gt;299.98&lt;/vResdInPixelsPerInch&gt;</pre>
+</div>
+<p>rozliseni display</p>
+<div class="highlight-python"><pre>&lt;hResdInPixelsPerInch&gt;299.98&lt;/hResdInPixelsPerInch&gt;</pre>
+</div>
+<p>depth:</p>
+<div class="highlight-python"><pre>&lt;contiguousCodestreamBox&gt;
+&lt;siz&gt;
+  &lt;ssizDepth&gt;8&lt;/ssizDepth&gt;</pre>
+</div>
+<p>precincts</p>
+<div class="highlight-python"><pre>&lt;cod&gt;
+&lt;precincts&gt;yes&lt;/precincts&gt;</pre>
+</div>
+<p>multiple component transformation</p>
+<div class="highlight-python"><pre>&lt;cod&gt;
+  &lt;multipleComponentTransformation&gt;yes&lt;/multipleComponentTransformation&gt;</pre>
+</div>
+<p>reset on boundaries</p>
+<div class="highlight-python"><pre>&lt;resetOnBoundaries&gt;no&lt;/resetOnBoundaries&gt;</pre>
+</div>
+<p>transformation</p>
+<div class="highlight-python"><pre>&lt;transformation&gt;5-3 reversible&lt;/transformation&gt;</pre>
+</div>
+<p>compression ration</p>
+<div class="highlight-python"><pre>&lt;compressionRatio&gt;2.39&lt;/compressionRatio&gt;</pre>
+</div>
+<dl class="docutils">
+<dt>comments ::</dt>
+<dd><blockquote class="first">
+<div>&lt;com&gt;
+&lt;lcom&gt;15&lt;/lcom&gt;
+&lt;rcom&gt;ISO/IEC 8859-15 (Latin)&lt;/rcom&gt;
+&lt;comment&gt;Kakadu-v6.4&lt;/comment&gt;</div></blockquote>
+<p class="last">&lt;/com&gt;</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 
@@ -501,7 +683,10 @@ jpylyzer --verbose <span class="s1">&#39;/opt/testovaci-data/2_Set ot TEST image
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">LPyLyzer</a><ul>
-<li><a class="reference internal" href="#significant-properties">Significant Properties</a></li>
+<li><a class="reference internal" href="#significant-properties">Significant Properties</a><ul>
+<li><a class="reference internal" href="#dalsi">dalsi</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
